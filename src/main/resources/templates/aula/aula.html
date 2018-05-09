@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" 
+      >
+
+    <head> 
+        <th:block th:include="fragments/scripts :: header" ></th:block>
+
+        <style type="text/css">
+            a:link, a:visited, a:active {
+                text-decoration: none;
+            }
+            a:hover {text-decoration: underline;  
+                     color: #cccccc; 
+                     font-size:150%; 
+            }
+        </style>
+    </head>    
+
+
+    <body>
+
+        <form id="form">
+            <input name="valor1" id="valor1" type="number"/>
+            <input name="valor2" id="valor2" type="number"/>
+
+            <button type="submit" id="btn_enviar">Calcular</button>
+
+
+
+
+        </form>
+
+
+
+
+
+        <th:block th:include="fragments/scripts :: scripts"></th:block> 
+        <script type="text/javascript">
+            $("form").on("submit", function (event) {
+              ajax("GET","http://172.25.227.13/mensagem.php");
+                event.preventDefault();
+                var dados = $(this).serialize();
+                $.ajax({
+                    url: "http://172.25.227.13/mensagem.php",
+                    type: "POST", /*method*/
+                    data: dados,
+                    success: function (data)
+                    {
+                        alert(data);
+                    },
+                    error: function(){
+                        alert("Erro");
+                    }
+                    
+                });
+                return false;
+            });
+
+        </script>
+        
+        <script>
+            function ajax(tipo , url){
+                var ajax = new XMLHttpRequest();
+                
+                // Seja tipo de requisição e URL com os paramaetros 
+                ajax.open(tipo ,url);
+                
+                //Envia Requisicao 
+                ajax.send();
+                
+                //Cria um evento para receber um retorno 
+                ajax.onreadystatechange() == function(){
+                    alert();            
+                //Caso o State seja 4 e o http.status for 200 , deu ok 
+                    if (ajax.readyState === 4) {
+                        if(ajax.status === 200 ){
+                            alert();
+                        }
+                        
+                    }
+                    alert();
+                }
+                
+            }
+            
+        </script>
+    </body>
+</html>

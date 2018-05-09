@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" 
+      >
+
+    <head> 
+        <th:block th:include="fragments/scripts :: header" ></th:block>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet"/>
+        <!-- Libraries CSS Files -->
+        <link th:href="@{/lib/font-awesome/css/font-awesome.min.css}" rel="stylesheet"/>
+        <link th:href="@{/lib/animate-css/animate.min.css}" rel="stylesheet"/>
+        <link th:href="@{/lib/shoppingfinance/shopping-finance.css}" rel="stylesheet"/>
+        <link th:href="@{/lib/portifolio/nivo-lightbox/nivo-lightbox.css}" rel="stylesheet"/>
+
+        <!-- Main Stylesheet File -->
+        <link th:href="@{/lib/style.css}" rel="stylesheet"/>
+
+    </head>    
+
+
+    <body style="background-color: #333333">
+        <div id="preloader"></div>
+
+        <!--==========================
+        Hero Section
+        ============================-->
+        <section id="hero">
+            <div class="hero-container">
+                <div class="wow fadeIn">
+                    <div class="hero-logo">
+                        <!-- Logo -->
+                        <a class="headerLogo smoothScroll" href="#">
+                            <i class=" step icon-diamond" style="font-size: 100px; "></i>
+
+                        </a>
+                        <h1><span class="rotating">ZOE SEMI JÓIAS</span></h1>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--==========================
+          Header Section
+          ============================-->
+        <header id="header">
+            <div class="container">
+
+                <div id="logo" class="pull-left">
+                    <a href="#hero"><i class=" step icon-diamond" style="font-size: 50px; color: white"></i> </a>
+                    <!-- Uncomment below if you prefer to use a text image -->
+                    <!--<h1><a href="#hero">Header 1</a></h1>-->
+                </div>
+
+                <nav id="nav-menu-container">
+                    <ul class="nav-menu">
+                        <li class="menu-active"><a href="#hero">Home</a></li>
+                        <li><a href="#about">Quem Somos</a></li>
+                        <!--                        <li><a href="#services">Produtos</a></li>-->
+                        <li><a href="#portfolio">Produtos</a></li>
+                        <!--<li><a href="#testimonials">Testimonials</a></li>-->
+                        <!--<li><a href="#team">Team</a></li>-->
+                        <li class="menu-has-children"><a href="">Produtos</a>
+                            <ul>
+                                <li><a href="#">Drop Down 1</a></li>
+                                <li class="menu-has-children"><a href="#">a</a>
+                                    <ul>
+                                        <li><a href="#">Deep Drop Down 1</a></li>
+                                        <li><a href="#">Deep Drop Down 2</a></li>
+                                        <li><a href="#">Deep Drop Down 3</a></li>
+                                        <li><a href="#">Deep Drop Down 4</a></li>
+                                        <li><a href="#">Deep Drop Down 5</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Drop Down 3</a></li>
+                                <li><a href="#">Drop Down 4</a></li>
+                                <li><a href="#">Drop Down 5</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#revendedorForm">Seja um Revedendor</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </nav>
+                <!-- #nav-menu-container -->
+            </div>
+        </header>
+        <!-- #header -->
+
+        
+
+
+        <!-- Portfolio Section -->
+        <div id="portfolio">
+            <div class="container">
+                <div class="section-title text-center center">
+                     <h1><span class="rotating">Produtos</span></h1>
+                    <hr></hr>
+                </div>
+                <div class="categories">
+                    <ul class="cat">
+                        <li>
+                            <ol class="type">
+                                <li><a href="#" data-filter="*" class="active">Todos</a></li>
+                                <li><a href="#" data-filter=".brincos">Brincos</a></li>
+                                <li><a href="#" data-filter=".colares">Colares</a></li>
+                                <li><a href="#" data-filter=".aneis">Anéis</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="row">
+                    <div class="portfolio-items">
+                        <div class="col-sm-6 col-md-3 col-lg-3 brincos">
+                            <div class="portfolio-item">
+                                <div class="hover-bg"> 
+                                    <a th:href="@{/img/brincos/brinco-1.jpeg}" title="Project Title" data-lightbox-gallery="gallery1">
+                                        <div class="hover-text">
+                                            <h4>Brinco BLABLABLA</h4>
+                                            <h5>R$ 45,00</h5>
+                                        </div>
+                                        <img th:src="@{/img/brincos/brinco-1.jpeg}" class="img-responsive" alt="Project Title"> </a> </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-3 col-lg-3 colares">
+                            <div class="portfolio-item">
+                                <div class="hover-bg"> <a th:href="@{/img/colares/colar-1.jpg}" title="Project Title" data-lightbox-gallery="gallery1">
+                                        <div class="hover-text">
+                                            <h4>Colar </h4>
+                                            <h5>R$ 50,00</h5>
+                                        </div>
+                                        <img th:src="@{/img/colares/colar-1.jpg}" class="img-responsive"  alt="Project Title"> </a> </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-3 col-lg-3 brincos">
+                            <div class="portfolio-item">
+                                <div class="hover-bg"> <a th:href="@{/img/brincos/brinco-2.jpg}" title="Project Title" data-lightbox-gallery="gallery1">
+                                        <div class="hover-text">
+                                            <h4>Brinco </h4>
+                                            <h5>R$ 30,00</h5>
+                                        </div>
+                                        <img th:src="@{/img/brincos/brinco-2.jpg}" class="img-responsive" alt="Project Title" > </a> </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-lg-3 aneis">
+                            <div class="portfolio-item">
+                                <div class="hover-bg"> <a th:href="@{/img/aneis/anel-1.jpg}" title="Anel R$20,00" data-lightbox-gallery="gallery1">
+                                        <div class="hover-text">
+                                            <h4>Anel</h4>
+                                            <h5>R$ 20,00</h5>
+                                        </div>
+                                        <img th:src="@{/img/aneis/anel-1.jpg}" class="img-responsive" alt=""> </a> </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<!-- Seja uma Revendedora SECTION -->
+        <br></br>
+
+        <section class="contact-form" id="revendedorForm">
+            <div class="container">
+                <div class="section-title text-center center">
+                    <hr></hr>
+                     <h1><span class="rotating">Seja um Revendedor ZOE</span></h1>
+               <hr></hr>
+                    
+                </div>
+            </div>
+            <div class="container">		    
+                <div class="inner contact">
+                    <!-- Form Area -->
+                    <div class="contact-form">
+                        <!-- Form -->
+                        <br />
+                        <form id="contact-us" method="post" action="contact.php">
+                            <!-- Left Inputs -->
+                            <div class="col-xs-6 ">
+                                <!-- Name -->
+                                <br></br>
+                                    <input type="text" name="name" id="name" required="required" class="form" placeholder="Nome" />
+                                    <!-- Email -->
+                                    <input type="email" name="email" id="email" required="required" class="form" placeholder="Email" />
+                                    <!-- secondayject -->
+                                    <input type="text" name="secondayject" id="secondayject" required="required" class="form" placeholder="Telefone" />
+                            </div><!-- End Left Inputs -->
+                            <!-- Right Inputs -->
+                            <div class="col-xs-6">
+                                <!-- Message -->
+                                <br></br>
+                                    <textarea name="message" id="message" class="form textarea"  placeholder="Mensagem"></textarea>
+                            </div><!-- End Right Inputs -->
+                            <!-- Bottom secondaymit -->
+                            <div class="relative fullwidth col-xs-12">
+                                <!-- Send Button -->
+                                <button type="button" id="secondaymit" name="secondaymit" class="form-btn semibold">Enviar</button> 
+                            </div><!-- End Bottom secondaymit -->
+                            <!-- Clear -->
+                            <div class="clear"></div>
+                        </form>
+
+                        <!-- Your Mail Message -->
+                        <div class="mail-message-area">
+                            <!-- Message -->
+                            <div class="alert gray-bg mail-message not-visible-message">
+                                <strong>Thank You !</strong> Your email has been delivered.
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End Contact Form Area -->
+            </div><!-- End Inner -->
+
+            <br />
+
+        </section>
+
+
+
+
+
+
+        <!--        ==========================
+          Porfolio Section
+          ============================
+          <section id="portfolio">
+            <div class="container wow fadeInUp">
+              <div class="row">
+                <div class="col-md-12">
+                  <h3 class="section-title">Portfolio</h3>
+                  <div class="section-title-divider"></div>
+                  <p class="section-description">Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus ses haec dicturum fuisse</p>
+                </div>
+              </div>
+        
+              <div class="row">
+                <div class="col-md-3">
+                  <a class="portfolio-item" style="background-image: url(img/portfolio-1.jpg);" href="">
+                    <div class="details">
+                      <h4>Portfolio 1</h4>
+                      <span>Alored dono par</span>
+                    </div>
+                  </a>
+                </div>
+        
+                <div class="col-md-3">
+                  <a class="portfolio-item" style="background-image: url(img/portfolio-2.jpg);" href="">
+                    <div class="details">
+                      <h4>Portfolio 2</h4>
+                      <span>Alored dono par</span>
+                    </div>
+                  </a>
+                </div>
+        
+                <div class="col-md-3">
+                  <a class="portfolio-item" style="background-image: url(img/portfolio-3.jpg);" href="">
+                    <div class="details">
+                      <h4>Portfolio 3</h4>
+                      <span>Alored dono par</span>
+                    </div>
+                  </a>
+                </div>
+        
+                <div class="col-md-3">
+                  <a class="portfolio-item" style="background-image: url(img/portfolio-4.jpg);" href="">
+                    <div class="details">
+                      <h4>Portfolio 4</h4>
+                      <span>Alored dono par</span>
+                    </div>
+                  </a>
+                </div>
+        
+                <div class="col-md-3">
+                  <a class="portfolio-item" style="background-image: url(img/portfolio-5.jpg);" href="">
+                    <div class="details">
+                      <h4>Portfolio 5</h4>
+                      <span>Alored dono par</span>
+                    </div>
+                  </a>
+                </div>
+        
+                <div class="col-md-3">
+                  <a class="portfolio-item" style="background-image: url(img/portfolio-6.jpg);" href="">
+                    <div class="details">
+                      <h4>Portfolio 6</h4>
+                      <span>Alored dono par</span>
+                    </div>
+                  </a>
+                </div>
+        
+                <div class="col-md-3">
+                  <a class="portfolio-item" style="background-image: url(img/portfolio-7.jpg);" href="">
+                    <div class="details">
+                      <h4>Portfolio 7</h4>
+                      <span>Alored dono par</span>
+                    </div>
+                  </a>
+                </div>
+        
+                <div class="col-md-3">
+                  <a class="portfolio-item" style="background-image: url(img/portfolio-8.jpg);" href="">
+                    <div class="details">
+                      <h4>Portfolio 8</h4>
+                      <span>Alored dono par</span>
+                    </div>
+                  </a>
+                </div>
+        
+              </div>
+            </div>
+          </section>-->
+
+
+
+
+        <!--Scripts-->
+        <th:block th:include="fragments/scripts :: scripts"></th:block> 
+        <!-- Required JavaScript Libraries -->
+        <script th:src="@{/lib/jquery/jquery.min.js}"></script>
+        <script th:src="@{/lib/bootstrap/js/bootstrap.min.js}"></script>
+        <script th:src="@{/lib/superfish/hoverIntent.js}"></script>
+        <script th:src="@{/lib/superfish/superfish.min.js}"></script>
+        <script th:src="@{/lib/morphext/morphext.min.js}"></script>
+        <script th:src="@{/lib/wow/wow.min.js}"></script>
+        <script th:src="@{/lib/stickyjs/sticky.js}"></script>
+        <script th:src="@{/lib/easing/easing.js}"></script>
+
+        <!-- Template Specisifc Custom Javascript File -->
+        <script th:src="@{/js/home/custom.js}"></script>
+
+        <script th:src="@{/contactform/contactform.js}"></script>
+
+        <!--PORTIFOLIO-->
+        <script type="text/javascript" th:src="@{/lib/portifolio/js/nivo-lightbox.js}"></script> 
+        <script type="text/javascript" th:src="@{/lib/portifolio/js/jquery.isotope.js}"></script> 
+        <script type="text/javascript" th:src="@{/lib/portifolio/js/main.js}"></script>
+    </body>
+</html>

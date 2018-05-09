@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" >
+
+    <head th:fragment="header">
+        <meta charset="utf-8"/>
+        <meta name ="viewport" content="width=device-width,initial-scale=1.0"/>
+        <title>ZOE Semi Jóias</title>
+        <meta name="JR System - Daniel de Araujo Junior" content="daniel.a.junior@hotmail.com"/>
+        
+        <!--Favicon -->
+        <link rel="icon" type="imagem/png" th:href="@{/images/favicon.png}"/>
+        
+        <!--Base Css Files--> 
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" type="text/css" />
+        <!--End Css File-->
+        
+        <!--Fonts-->
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet"/>
+        
+        
+       
+    </head>
+
+    <body th:fragment="scripts" >
+
+        <!-- jQuery / Bootstrap  -->        
+        <script th:src="@{/js/jquery.js}"></script>
+        <script src="../../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}" ></script>
+        
+        
+    </body>
+</html>

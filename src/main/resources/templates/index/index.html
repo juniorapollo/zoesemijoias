@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" 
+     >
+
+    <head> 
+        <th:block th:include="fragments/scripts :: header" ></th:block>
+         <link th:href="@{/css/index/coming-sssoon.css}" rel="stylesheet" type="text/css" />
+        
+    </head>    
+
+
+    <body>
+        <nav class="navbar navbar-transparent navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="https://www.facebook.com/semijoias.zoe/?ref=br_rs" target="_blank">
+                                <i class="fa fa-facebook-square"></i>
+                                Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-instagram"></i>
+                                Instagram
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container -->
+        </nav>
+
+        <div class="main" style="background-image: url('images/video_bg.jpg')">
+            
+            <video id="video_background" preload="auto" autoplay="autoplay" loop="loop" muted="muted" >
+                <source src="video/intro.mp4" type="video/mp4"/>
+            </video>
+            
+             
+            
+            <!--    Change the image source '/images/video_bg.jpg')" with your favourite image.     -->
+
+
+
+            <!--   You can change the black color for the filter with those colors: blue, green, red, orange       -->
+            <div class="container">
+                <a th:href="@{${@environment.getProperty('baseUrl')+'/home'}}">
+                    <h1 class="logo cursive">
+                        ZOE Semi Jóias
+                    </h1>
+                </a>
+
+                <!--  H1 can have 2 designs: "logo" and "logo cursive"           -->
+                <div class="cover black" data-color="black"></div>
+                <div class="content">
+                    <!--<h4 class="motto">Você sempre linda</h4>
+                    <div class="subscribe">
+                        
+                        <div class="row">
+                            <div class="col-md-4 col-md-offset-4 col-sm6-6 col-sm-offset-3 ">
+                                <form class="form-inline" role="form">
+                                  <div class="form-group">
+                                    <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                    <input type="email" class="form-control transparent" placeholder="Your email here...">
+                                  </div>
+                                  <button type="submit" class="btn btn-warning btn-fill">Notify Me</button>
+                                </form>
+        
+                            </div>
+                        </div>-->
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <!--<div class="container">
+                   Made with <i class="fa fa-heart heart"></i> by <a href="http://www.creative-tim.com">Creative Tim</a>. Free download <a href="http://www.creative-tim.com/product/coming-sssoon-page">here.</a>
+            </div>-->
+        </div>
+
+<!--Scripts-->
+        <th:block th:include="fragments/scripts :: scripts"></th:block> 
+
+    </body>
+</html>
